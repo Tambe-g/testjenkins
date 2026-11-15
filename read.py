@@ -1,4 +1,4 @@
-imoprt os
+import os
 
 print("JENKINS CREDENTIALS")
 
