@@ -1,25 +1,24 @@
 pipeline{
-    agent any
-    triggers{
-        cron('*/2 * * * *')
-    }
+    agent any 
 
     stages{
-        stage('checkout code '){
+        stage('download code / checkout code '){
             steps{
-                checkout scm
+                checkout scm 
             }
         }
-
-        stage('setup python'){
+        stage('show pytho version'){
             steps{
-                sh "python3 -m pip install -r requirements.txt"
+                sh " python3 --version"
             }
         }
         stage('run python program'){
             steps{
-                sh "python3 extract.py"
+                sh "python3 read.py"
             }
         }
+
+
     }
+
 }
