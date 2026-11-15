@@ -1,2 +1,9 @@
-print("read py ")
-print("read py ")
+imoprt os
+
+print("JENKINS CREDENTIALS")
+
+username = os.getenv('username')
+password = os.getenv('password')
+
+print(username)
+print(password)
